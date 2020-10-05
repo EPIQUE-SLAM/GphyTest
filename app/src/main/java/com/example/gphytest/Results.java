@@ -170,12 +170,12 @@ public class Results extends AppCompatActivity {
     }
 
     public void equalResults(){
-        if(     scorePhysio == scoreImageur && scorePhysio !=0 && scoreImageur !=0 && isBiotech == false && isStupide == false||
-                scorePhysio==scoreBiotech && scorePhysio !=0 && scoreBiotech !=0 && isImageur == false && isStupide == false   ||
-                scorePhysio == scoreStupide && scorePhysio !=0 && scoreStupide !=0 && isImageur == false && isBiotech == false||
-                scoreImageur == scoreBiotech && scoreImageur !=0 && scoreBiotech !=0 && isStupide == false && isPhysio == false||
-                scoreImageur == scoreStupide && scoreImageur !=0 && scoreStupide !=0 && isBiotech == false && isPhysio == false||
-                scoreBiotech == scoreStupide && scoreBiotech !=0 && scoreStupide !=0 && isImageur== false && isPhysio == false) {
+        if(     scorePhysio == scoreImageur && scorePhysio !=0 && scoreImageur !=0 && !isBiotech && !isStupide ||
+                scorePhysio==scoreBiotech && scorePhysio !=0 && scoreBiotech !=0 && !isImageur && !isStupide ||
+                scorePhysio == scoreStupide && scorePhysio !=0 && scoreStupide !=0 && !isImageur && !isBiotech ||
+                scoreImageur == scoreBiotech && scoreImageur !=0 && scoreBiotech !=0 && !isStupide && !isPhysio ||
+                scoreImageur == scoreStupide && scoreImageur !=0 && scoreStupide !=0 && !isBiotech && !isPhysio ||
+                scoreBiotech == scoreStupide && scoreBiotech !=0 && scoreStupide !=0 && !isImageur && !isPhysio ) {
             if (scoreDroite > scoreGauche){
                 viewResultat.setText("Vous êtes un indécis de droite ! Vous avez le cul entre deux chaises en ce qui concerne les études par contre pour cracher sur les féministes y a du monde !! ");
             }
