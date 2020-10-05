@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_on_secondary"
+    tools:context=".Page3">
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="254dp"
+        android:layout_height="21dp"
+        android:background="@color/common_google_signin_btn_text_dark_pressed"
+        android:backgroundTint="#593F3F"
+        android:progressTint="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/barre_de_progression"
+        android:textColor="@color/design_default_color_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ImageView
+        android:id="@+id/imageScore4"
+        android:layout_width="117dp"
+        android:layout_height="114dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gphy" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inconsolata"
+        android:text="De quel sexe êtes-vous?"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inconsolata"
+        android:text="Quelle est votre langage préféré"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <Button
+        android:id="@+id/btnNext3"
+        android:layout_width="107dp"
+        android:layout_height="48dp"
+        android:onClick="onClickNext"
+        android:text="Suivant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+    <Button
+        android:id="@+id/btnBack3"
+        android:layout_width="107dp"
+        android:layout_height="48dp"
+        android:onClick="onClickBack"
+        android:text="Retour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="193dp"
+        android:layout_height="31dp"
+        android:background="@color/design_default_color_on_primary"
+        android:backgroundTint="@color/design_default_color_background"
+        android:foregroundTint="@color/design_default_color_background"
+        android:indeterminateTint="@color/design_default_color_background"
+        android:max="100"
+        android:outlineAmbientShadowColor="@color/design_default_color_background"
+        android:outlineSpotShadowColor="@color/design_default_color_background"
+        android:progress="50"
+        android:progressTint="@color/design_default_color_error"
+        android:scrollbarThumbHorizontal="@color/design_default_color_background"
+        android:scrollbarThumbVertical="@color/design_default_color_background"
+        android:scrollbarTrackVertical="@color/design_default_color_background"
+        android:secondaryProgressTint="@color/design_default_color_error"
+        android:thumb="@color/design_default_color_error"
+        android:thumbTint="@color/design_default_color_error"
+        android:tickMark="@color/design_default_color_error"
+        android:tickMarkTint="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inconsolata"
+        android:text="Situez vous"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="86dp"
+        android:layout_height="102dp"
+        android:contentDescription="todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24"
+        app:srcCompat="@drawable/domi" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="81dp"
+        android:layout_height="100dp"
+        android:contentDescription="todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233"
+        app:srcCompat="@drawable/faivre" />
+
+    <TextView
+        android:id="@+id/txtViewProgrBar"
+        android:layout_width="182dp"
+        android:layout_height="45dp"
+        android:textColor="@color/design_default_color_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.237" />
+
+    <RadioGroup
+        android:id="@+id/rdGp1"
+        android:layout_width="331dp"
+        android:layout_height="151dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543">
+
+        <RadioButton
+            android:id="@+id/rbBtnJava"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_background"
+            android:checked="true"
+            android:fontFamily="@font/inconsolata"
+            android:text="Le java pour les rois"
+            android:textColor="@color/design_default_color_background" />
+
+        <RadioButton
+            android:id="@+id/rbBtnAda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_background"
+            android:fontFamily="@font/inconsolata"
+            android:text="L'ada on est là"
+            android:textColor="@color/design_default_color_background" />
+
+        <RadioButton
+            android:id="@+id/rbBtnSQL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_background"
+            android:fontFamily="@font/inconsolata"
+            android:text="SQL donne des ailes"
+            android:textColor="@color/design_default_color_background" />
+
+        <RadioButton
+            android:id="@+id/rbBtnCPP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_background"
+            android:fontFamily="@font/inconsolata"
+            android:text="Le C ++ tout dans l'anus"
+            android:textColor="@color/design_default_color_background" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="314dp"
+        android:layout_height="116dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.826">
+
+        <RadioButton
+            android:id="@+id/rbBtnHomme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_background"
+            android:fontFamily="@font/inconsolata"
+            android:text="Homme"
+            android:textColor="@color/design_default_color_background" />
+
+        <RadioButton
+            android:id="@+id/rbBtnFemme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_background"
+            android:fontFamily="@font/inconsolata"
+            android:text="Femme"
+            android:textColor="@color/design_default_color_background" />
+
+        <RadioButton
+            android:id="@+id/rbBtnAutre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/design_default_color_background"
+            android:checked="true"
+            android:fontFamily="@font/inconsolata"
+            android:text="Autres"
+            android:textColor="@color/design_default_color_background" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
