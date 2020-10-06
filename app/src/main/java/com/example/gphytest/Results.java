@@ -5,25 +5,36 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Movie;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.SystemClock;
 import android.text.format.Time;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
+
+import com.koushikdutta.ion.Ion;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.stream.Stream;
 
 import javax.xml.transform.Result;
 
@@ -41,6 +52,8 @@ public class Results extends AppCompatActivity {
     private boolean isImageur = false;
     private boolean isStupide = false;
     private ImageView imageScore;
+    private WebView gifTest;
+
 
 
     private TextView viewScorePhysio2;
@@ -69,11 +82,13 @@ public class Results extends AppCompatActivity {
         imageScore = findViewById(R.id.imageScore);
         inputMail = findViewById(R.id.inputMail);
 
-        scorePhysio = Page1.getCompteurPhysio1() + Page2.getCompteurPhysio2() + Page3.getCompteurPhysio3() + Page4.getCompteurPhysio4();
+
+
+        scorePhysio = Page1.getCompteurPhysio1() + Page2.getCompteurPhysio2() + Page3.getCompteurPhysio3() + Page4.getCompteurPhysio4() + 100;
         scoreBiotech = Page1.getCompteurBiotech1() + Page2.getCompteurBiotech2() + Page3.getCompteurBiotech3() + Page4.getCompteurBiotech4();
         scoreImageur = Page1.getCompteurImageur1() + Page2.getCompteurImageur2() + Page3.getCompteurImageur3() + Page4.getCompteurImageur4();
         scoreStupide = Page1.getCompteurStupidite1() + Page2.getCompteurStupidite2() + Page3.getCompteurStupidite3() + Page4.getCompteurStupidite4();
-        scoreGauche = Page1.getCompteurGauche1() + Page2.getCompteurGauche2() + Page3.getCompteurGauche3() + Page4.getCompteurGauche4();
+        scoreGauche = Page1.getCompteurGauche1() + Page2.getCompteurGauche2() + Page3.getCompteurGauche3() + Page4.getCompteurGauche4()+ 100;
         scoreDroite = Page1.getCompteurDroite1() + Page2.getCompteurDroite2() + Page3.getCompteurDroite3() + Page4.getCompteurDroite4();
 
         Log.d("score physio", String.valueOf(scorePhysio));
@@ -84,7 +99,7 @@ public class Results extends AppCompatActivity {
         viewScorePhysio2.setText(String.valueOf(scorePhysio) + " points");
         viewScoreBiotech2.setText(String.valueOf(scoreBiotech)+" points");
         viewScoreImageur2.setText(String.valueOf(scoreImageur)+" points");
-        viewScoreGauche2.setText(String.valueOf(scoreGauche)+" points");
+        viewScoreGauche2.setText(String.valueOf(scoreGauche)+ " points");
         viewScoreDroite2.setText(String.valueOf(scoreDroite)+" points");
         viewScoreStupide2.setText(String.valueOf(scoreStupide)+" points");
 
@@ -119,7 +134,19 @@ public class Results extends AppCompatActivity {
             if (scoreGauche > scoreDroite) {
                 Log.d("--------------------","toto2");
                 viewResultat.setText("Vous êtes un physio de gauche ! Trop nul pour réussir la PACES et trop nul pour développer une appli. Mais au moins vous travaillerez à SANOFI et ça c'est la classe !  ");
-                imageScore.setImageResource(R.drawable.melenchon);
+
+//                InputStream stream = null;
+//                try {
+//                    stream = getAssets().open("raoult.gif");
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//                GifMovieView view = new GifMovieView(this, stream);
+//                setContentView(view);
+//                //videoScore.setVideoPath("drawable\raoult.gif");
+                //Ion.with(imageScore).load("https://media1.tenor.com/images/819c4ccfdbed99a67a8d8dbc50752315/tenor.gif?itemid=17670144");
+                imageScore.setImageResource (R.drawable.raoult);
+
             }
 
             else {
@@ -241,5 +268,31 @@ public class Results extends AppCompatActivity {
         write_historic_in_file();
         Toast.makeText(this, "Sauvegarde terminé dans votre dossier DCIM", Toast.LENGTH_SHORT).show();
     }
+
+//    class GifMovieView extends View {
+//        private Movie mMovie;
+//        private long mMoviestart;
+//
+//        public GifMovieView(Context context, InputStream stream) {
+//            super(context);
+//
+//            InputStream mStream = stream;
+//            mMovie = Movie.decodeStream(mStream);
+//        }
+//
+//        @Override
+//        protected void onDraw(Canvas canvas) {
+//            canvas.drawColor(Color.TRANSPARENT);
+//            super.onDraw(canvas);
+//            final long now = SystemClock.uptimeMillis();
+//            if (mMoviestart == 0) {
+//                mMoviestart = now;
+//            }
+//            final int relTime = (int)((now - mMoviestart) % mMovie.duration());
+//            mMovie.setTime(relTime);
+//            mMovie.draw(canvas, 10, 10);
+//            this.invalidate();
+//        }
+//    }
 
 }
