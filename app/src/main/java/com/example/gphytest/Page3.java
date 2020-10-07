@@ -185,33 +185,4 @@ public class Page3 extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
-//    @Override
-//    public void onSaveInstanceState(Bundle savedInstanceState) {
-//        super.onSaveInstanceState(savedInstanceState);
-//        // Save UI state changes to the savedInstanceState
-//        // This bundle will be passed to onCreate if the process is
-//        // killed and restarted.
-//        savedInstanceState.putInt("compteurGauche3", compteurGauche3);
-//        savedInstanceState.putInt("compteurGauche", compteurGauche);
-//
-//        Log.d("save P3",String.valueOf(compteurGauche3));
-//    }
-
-//    @Override
-//    protected void onRestoreInstanceState(Bundle savedInstanceState){
-//        super.onRestoreInstanceState(savedInstanceState);
-//        Log.d("###############################","");
-//        Log.d("start restore P3","");
-//
-//        compteurGauche = savedInstanceState.getInt("compteurGauche");
-//        compteurGauche=compteurGauche-compteurGauche3;
-//        compteurGauche3=0;
-//
-//        Log.d("compteurGauche",String.valueOf(compteurGauche));
-//        Log.d("compteurGauche3",String.valueOf(compteurGauche3));
-//        Log.d("","finish restore P3");
-//        Log.d("###############################","");
-//    }
 }

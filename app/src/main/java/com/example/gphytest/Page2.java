@@ -104,32 +104,4 @@ public class Page2 extends AppCompatActivity {
         return compteurDroite2;
     }
 
-    //    @Override
-////    protected void onSaveInstanceState(Bundle savedInstanceSate) {
-////        super.onSaveInstanceState(savedInstanceSate);
-////        savedInstanceSate.putInt("physio2", compteurPhysio2);
-////        savedInstanceSate.putInt("biotech2", compteurBiotech2);
-////        savedInstanceSate.putInt("imageur2", compteurImageur2);
-////        savedInstanceSate.putInt("gauche2", compteurGauche2);
-////        savedInstanceSate.putInt("droite2", compteurDroite2);
-////        savedInstanceSate.putInt("stupide2", compteurStupidite2);
-////    }
-
-
-    //    @Override
-//    protected void onRestoreInstanceState(Bundle savedInstanceState){
-//        super.onRestoreInstanceState(savedInstanceState);
-//        //variableData = savedInstanceState.getInt("AStringKey");
-//        //variableData2 = savedInstanceState.getString("AStringKey2");
-////        physioRestore = savedInstanceState.getString("physio1");
-////       inputPokemon.setText(stringTemp);
-//
-//        compteurBiotech2 = scoreBiotech1;
-//        compteurPhysio2 = scorePhysio1;
-//        compteurImageur2 =scoreImageur1;
-//        compteurGauche2 =scoreGauche1;
-//        compteurDroite2=scoreDroite1;
-//        compteurStupidite2=scoreStupide1;
-//
-//    }
 }

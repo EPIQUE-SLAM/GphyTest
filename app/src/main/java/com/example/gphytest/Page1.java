@@ -155,39 +155,4 @@ public class Page1 extends AppCompatActivity {
 
         Log.d("---------------------------", "finish resume");
     }
-
-//    @Override
-////    protected void onSaveInstanceState(Bundle savedInstanceSate) {
-////        super.onSaveInstanceState(savedInstanceSate);
-////        savedInstanceSate.putInt ("physio1", compteurPhysio1);
-////        savedInstanceSate.putInt ("biotech1", compteurBiotech1);
-////        savedInstanceSate.putInt ("imageur1", compteurImageur1);
-////        savedInstanceSate.putInt ("gauche1", compteurGauche1);
-////        savedInstanceSate.putInt ("droite1", compteurDroite1);
-////        savedInstanceSate.putInt ("stupide1", compteurStupidite1);
-////
-////    }
-
-
-//    @Override
-//    protected void onRestoreInstanceState(Bundle savedInstanceState){
-//        super.onRestoreInstanceState(savedInstanceState);
-//
-//         compteurBiotech1 = 0;
-//         compteurPhysio1 = 0;
-//         compteurImageur1 =0;
-//         compteurGauche1 =0;
-//         compteurDroite1=0;
-//         compteurStupidite1=0;
-//
-////        savedInstanceState.getString("physioRetour");
-////        savedInstanceState.getString("biotechRetour");
-////        savedInstanceState.getString("imageurRetour");
-////        savedInstanceState.getString("stupideRetour");
-////        savedInstanceState.getString("gaucheRetour");
-////        savedInstanceState.getString("droiteRetour");
-//
-//    }
-
-
 }
