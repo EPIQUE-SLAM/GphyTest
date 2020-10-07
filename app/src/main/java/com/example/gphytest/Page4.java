@@ -3,13 +3,15 @@ package com.example.gphytest;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.*;
-import android.media.*;
+import android.media.MediaPlayer;
 import android.os.*;
-import android.util.*;
+import android.util.Log;
 import android.view.*;
 import android.widget.*;
 
 public class Page4 extends AppCompatActivity {
+
+    private static final String APP_TAG = "GphyTest";
 
     private static int compteurPhysio4;
     private static int compteurImageur4;
@@ -40,7 +42,8 @@ public class Page4 extends AppCompatActivity {
 
     private TextView txtViewSwitch;
 
-    MediaPlayer mediaPlayer;
+    MediaPlayer media1;
+    Song song;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,38 +57,40 @@ public class Page4 extends AppCompatActivity {
         progressBar4.setMax(100);
         progressBar4.setProgress(100);
 
-        checkBoxPhysio=findViewById(R.id.checkBoxPhysio);
-        checkBoxBiotech=findViewById(R.id.checkBoxBiotech);
-        checkBoxImagerie=findViewById(R.id.checkBoxImagerie);
-        checkBoxAnglais=findViewById(R.id.checkBoxAnglais);
-        checkBoxBDD=findViewById(R.id.checkBoxBDD);
-        checkBoxCOOPOO=findViewById(R.id.checkBoxCOOPOO);
-        checkBoxMITBS=findViewById(R.id.checkBoxMITBS);
-        checkBoxIHM=findViewById(R.id.checkBoxIHM);
+        checkBoxPhysio = findViewById(R.id.checkBoxPhysio);
+        checkBoxBiotech = findViewById(R.id.checkBoxBiotech);
+        checkBoxImagerie = findViewById(R.id.checkBoxImagerie);
+        checkBoxAnglais = findViewById(R.id.checkBoxAnglais);
+        checkBoxBDD = findViewById(R.id.checkBoxBDD);
+        checkBoxCOOPOO = findViewById(R.id.checkBoxCOOPOO);
+        checkBoxMITBS = findViewById(R.id.checkBoxMITBS);
+        checkBoxIHM = findViewById(R.id.checkBoxIHM);
 
-        rbMaison=findViewById(R.id.rbMaison);
-        rbPLB=findViewById(R.id.rbPLB);
-        rbRevision=findViewById(R.id.rbRevision);
-        rbWallaby=findViewById(R.id.rbWallaby);
+        rbMaison = findViewById(R.id.rbMaison);
+        rbPLB = findViewById(R.id.rbPLB);
+        rbRevision = findViewById(R.id.rbRevision);
+        rbWallaby = findViewById(R.id.rbWallaby);
 
         switchElephRhino = findViewById(R.id.switchElephRhino);
 
         txtViewSwitch = findViewById(R.id.txtViewSwitch);
+
+        song = new Song();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("###############################","onResume start");
+        Log.d("###############################", "onResume start");
         //Log.d("--------------",String.valueOf(compteurGauche3));
-        compteurGauche4=0;
-        compteurDroite4=0;
-        compteurPhysio4=0;
-        compteurBiotech4=0;
-        compteurImageur4=0;
-        compteurStupidite4=0;
+        compteurGauche4 = 0;
+        compteurDroite4 = 0;
+        compteurPhysio4 = 0;
+        compteurBiotech4 = 0;
+        compteurImageur4 = 0;
+        compteurStupidite4 = 0;
         //Log.d("--------------",String.valueOf(compteurGauche3));
-        Log.d("###############################","onResume finish");
+        Log.d("###############################", "onResume finish");
     }
 
     public void onClickBack(View view) {
@@ -116,84 +121,97 @@ public class Page4 extends AppCompatActivity {
         return compteurDroite4;
     }
 
-    public void onClickNext(View view){
-        if (checkBoxPhysio.isChecked()){
-            compteurPhysio4=compteurPhysio4+3;
-            compteurGauche4=compteurGauche4+1;
+    public void onClickNext(View view) {
+        if (checkBoxPhysio.isChecked()) {
+            compteurPhysio4 = compteurPhysio4 + 3;
+            compteurGauche4 = compteurGauche4 + 1;
         }
-        if (checkBoxBiotech.isChecked()){
-            compteurBiotech4=compteurBiotech4+3;
-            compteurGauche4=compteurGauche4+1;
-            compteurDroite4=compteurDroite4+1;
+        if (checkBoxBiotech.isChecked()) {
+            compteurBiotech4 = compteurBiotech4 + 3;
+            compteurGauche4 = compteurGauche4 + 1;
+            compteurDroite4 = compteurDroite4 + 1;
         }
-        if (checkBoxImagerie.isChecked()){
-            compteurImageur4=compteurImageur4+3;
-            compteurDroite4=compteurDroite4+1;
+        if (checkBoxImagerie.isChecked()) {
+            compteurImageur4 = compteurImageur4 + 3;
+            compteurDroite4 = compteurDroite4 + 1;
         }
-        if (checkBoxAnglais.isChecked()){
-            compteurPhysio4=compteurPhysio4+1;
-            compteurDroite4=compteurDroite4+2;
+        if (checkBoxAnglais.isChecked()) {
+            compteurPhysio4 = compteurPhysio4 + 1;
+            compteurDroite4 = compteurDroite4 + 2;
         }
-        if (checkBoxBDD.isChecked()){
-            compteurPhysio4=compteurPhysio4+2;
+        if (checkBoxBDD.isChecked()) {
+            compteurPhysio4 = compteurPhysio4 + 2;
         }
-        if (checkBoxCOOPOO.isChecked()){
-            compteurBiotech4=compteurBiotech4+1;
-            compteurImageur4=compteurImageur4+1;
+        if (checkBoxCOOPOO.isChecked()) {
+            compteurBiotech4 = compteurBiotech4 + 1;
+            compteurImageur4 = compteurImageur4 + 1;
         }
-        if (checkBoxMITBS.isChecked()){
-            compteurPhysio4=compteurPhysio4+3;
-            compteurBiotech4=compteurBiotech4+1;
+        if (checkBoxMITBS.isChecked()) {
+            compteurPhysio4 = compteurPhysio4 + 3;
+            compteurBiotech4 = compteurBiotech4 + 1;
         }
-        if (checkBoxIHM.isChecked()){
-            compteurBiotech4=compteurBiotech4+2;
-            compteurImageur4=compteurImageur4+2;
-        }
-
-        if (!switchElephRhino.isChecked()){
-            compteurStupidite4=compteurStupidite4+2;
+        if (checkBoxIHM.isChecked()) {
+            compteurBiotech4 = compteurBiotech4 + 2;
+            compteurImageur4 = compteurImageur4 + 2;
         }
 
-        if (rbWallaby.isChecked()){
-            compteurDroite4=compteurDroite4+2;
-            compteurImageur4=compteurImageur4+1;
-        } else if (rbRevision.isChecked()){
-            compteurPhysio4=compteurPhysio4+2;
-            compteurGauche4=compteurGauche4+1;
-        } else if (rbPLB.isChecked()){
-            compteurGauche4=compteurGauche4+2;
-            compteurBiotech4=compteurBiotech4+2;
-        } else if (rbMaison.isChecked()){
-            compteurGauche4=compteurGauche4+1;
+        if (!switchElephRhino.isChecked()) {
+            compteurStupidite4 = compteurStupidite4 + 2;
+        }
+
+        if (rbWallaby.isChecked()) {
+            compteurDroite4 = compteurDroite4 + 2;
+            compteurImageur4 = compteurImageur4 + 1;
+        } else if (rbRevision.isChecked()) {
+            compteurPhysio4 = compteurPhysio4 + 2;
+            compteurGauche4 = compteurGauche4 + 1;
+        } else if (rbPLB.isChecked()) {
+            compteurGauche4 = compteurGauche4 + 2;
+            compteurBiotech4 = compteurBiotech4 + 2;
+        } else if (rbMaison.isChecked()) {
+            compteurGauche4 = compteurGauche4 + 1;
         }
 
         Intent intent = new Intent(this, Results.class);
         startActivity(intent);
     }
 
-    public void onClickElephant(View view){
-        if (switchElephRhino.isChecked()){
-            mediaPlayer = MediaPlayer.create(this,R.raw.elepahnt);
-            //mediaPlayer.start();
+    public void onClickElephant(View view) {
+        if (switchElephRhino.isChecked()) {
             txtViewSwitch.setText(switchElephRhino.getTextOn().toString());
-        } else if (!switchElephRhino.isChecked()){
+            song.execute();
+        } else if (!switchElephRhino.isChecked()) {
             txtViewSwitch.setText(switchElephRhino.getTextOff().toString());
         }
 
     }
 
-//    @Override
-//    public void onSaveInstanceState(Bundle savedInstanceState) {
-//        super.onSaveInstanceState(savedInstanceState);
-//        // Save UI state changes to the savedInstanceState.
-//        // This bundle will be passed to onCreate if the process is
-//        // killed and restarted.
-//        savedInstanceState.putAll(savedInstanceState);
-//    }
-//
-//    @Override
-//    protected void onRestoreInstanceState(Bundle savedInstanceState){
-//        super.onRestoreInstanceState(savedInstanceState);
-//    }
+    class Song extends AsyncTask<Void, Integer, Void> {
+        private String string;
 
+        public void Media() {
+
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) { // Se fait en background du thread UI
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            // Inutile ici, cf doc
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) { // S'exécute sur le ThreadUI après doInBackground
+            super.onPostExecute(aVoid);
+            // ATTENTION, il faut adapter le code ci-dessous avec vos controles graphiques.
+            //InfoPokemon.this.txtViewType.setText(resname);
+            media1 = MediaPlayer.create(getBaseContext(), R.raw.elephant);
+            media1.start();
+        }
+
+    }
 }

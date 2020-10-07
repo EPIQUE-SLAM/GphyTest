@@ -81,6 +81,8 @@ public class Page3 extends AppCompatActivity {
                 actualizeProgresseBar(seekBarChangedValue);
             }
         });
+
+        txtViewProgrBar.setText("Vous êtes plutôt indecis\n ¯\\_(ツ)_/¯");
     }
 
     @Override
@@ -126,37 +128,33 @@ public class Page3 extends AppCompatActivity {
         finish();
     }
 
-    public void actualizeProgresseBar(Integer progress){
-        String strTemp = "La barre est à "+ String.valueOf(progress)+"%";
-        if (seekBarChangedValue==100){
-            strTemp="Vive la droite, à bat les noirs";
-        } else if (seekBarChangedValue==0){
-            strTemp="Vive la gauche, les politiques tous des pourris";
-        } else if (seekBarChangedValue<50){
-            strTemp=strTemp+" à gauche";
-        } else if (seekBarChangedValue>50){
-            strTemp=strTemp+" à droite";
-        } else if (seekBarChangedValue==50){
-            strTemp="Vous être indecis ¯\\_(ツ)_/¯";
+    public void actualizeProgresseBar(Integer progress) {
+        String strTemp = "La barre est";
+        if (seekBarChangedValue < 26) {
+            strTemp = "Vive Faivre, la becane ma passion";
+        } else if (seekBarChangedValue >= 26 && seekBarChangedValue < 46) {
+            strTemp = strTemp + " pour Faivre";
+        } else if (seekBarChangedValue >= 46 && seekBarChangedValue < 56) {
+            strTemp = "Vous êtes plutôt indecis\n ¯\\_(ツ)_/¯";
+        } else if (seekBarChangedValue >= 56 && seekBarChangedValue < 76) {
+            strTemp = strTemp + " pour Domi";
+        } else if (seekBarChangedValue >= 76) {
+            strTemp = "Vive Domi, Geniet Power !!!";
         }
         txtViewProgrBar.setText(strTemp);
     }
 
     public void onClickNext(View view){
-        if (seekBarChangedValue==50){
-            compteurStupidite3=compteurStupidite3+2;
-        }
-        if (seekBarChangedValue>=75){
-            compteurDroite3=compteurDroite3+2;
-
-        }else if (seekBarChangedValue>=50){
-            compteurDroite3=compteurDroite3+1;
-
-        } else if (seekBarChangedValue>=25){
-            compteurGauche3=compteurGauche3+1;
-
-        } else if (seekBarChangedValue>=0){
+        if (seekBarChangedValue < 26){
             compteurGauche3=compteurGauche3+2;
+        } else if (seekBarChangedValue >= 26 && seekBarChangedValue < 46){
+            compteurGauche3=compteurGauche3+1;
+        }else if (seekBarChangedValue >= 46 && seekBarChangedValue < 56){
+            compteurStupidite3=compteurStupidite3+2;
+        } else if (seekBarChangedValue >= 56 && seekBarChangedValue < 76){
+            compteurDroite3=compteurDroite3+1;
+        } else if (seekBarChangedValue >= 76){
+            compteurDroite3=compteurDroite3+2;
         }
 
         if (rbBtnJava.isChecked()){

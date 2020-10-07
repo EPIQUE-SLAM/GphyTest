@@ -129,14 +129,14 @@
         android:layout_width="384dp"
         android:layout_height="60dp"
         android:fontFamily="@font/inconsolata"
+        android:text="@string/l_l_phant_est_plus_fort_que_le_rhinoc_ros"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.451"
-        tools:text="L'éléphant est plus fort que le rhinocéros" />
+        app:layout_constraintVertical_bias="0.451" />
 
     <TextView
         android:id="@+id/textView18"
