@@ -52,7 +52,7 @@ public class Results extends AppCompatActivity {
     private boolean isImageur = false;
     private boolean isStupide = false;
     private ImageView imageScore;
-    private WebView gifTest;
+
 
 
 
@@ -84,11 +84,11 @@ public class Results extends AppCompatActivity {
 
 
 
-        scorePhysio = Page1.getCompteurPhysio1() + Page2.getCompteurPhysio2() + Page3.getCompteurPhysio3() + Page4.getCompteurPhysio4() + 100;
+        scorePhysio = Page1.getCompteurPhysio1() + Page2.getCompteurPhysio2() + Page3.getCompteurPhysio3() + Page4.getCompteurPhysio4();
         scoreBiotech = Page1.getCompteurBiotech1() + Page2.getCompteurBiotech2() + Page3.getCompteurBiotech3() + Page4.getCompteurBiotech4();
         scoreImageur = Page1.getCompteurImageur1() + Page2.getCompteurImageur2() + Page3.getCompteurImageur3() + Page4.getCompteurImageur4();
         scoreStupide = Page1.getCompteurStupidite1() + Page2.getCompteurStupidite2() + Page3.getCompteurStupidite3() + Page4.getCompteurStupidite4();
-        scoreGauche = Page1.getCompteurGauche1() + Page2.getCompteurGauche2() + Page3.getCompteurGauche3() + Page4.getCompteurGauche4()+ 100;
+        scoreGauche = Page1.getCompteurGauche1() + Page2.getCompteurGauche2() + Page3.getCompteurGauche3() + Page4.getCompteurGauche4();
         scoreDroite = Page1.getCompteurDroite1() + Page2.getCompteurDroite2() + Page3.getCompteurDroite3() + Page4.getCompteurDroite4();
 
         Log.d("score physio", String.valueOf(scorePhysio));
@@ -113,7 +113,7 @@ public class Results extends AppCompatActivity {
         i.setType("message/rfc822");
         i.putExtra(Intent.EXTRA_EMAIL  , new String[]{mail});
         i.putExtra(Intent.EXTRA_SUBJECT, "Results");
-        i.putExtra(Intent.EXTRA_TEXT   , "Voici les résultats de votre GPHY test :\n\n" +viewResultat.getText());
+        i.putExtra(Intent.EXTRA_TEXT   , "Voici les résultats de votre GPHY test :\n\n" +viewResultat.getText() + "\n\n" + "Score Physio: " +scorePhysio + " points"+ "\n\n" + "Score Biotech: " +scoreBiotech + " points" + "\n\n" + "Score Imageur: " +scoreImageur + " points" + "\n\n" + "Score droite: " +scoreDroite + " points" + "\n\n" + "Score Gauche: " +scoreGauche + " points");
         try {
             startActivity(Intent.createChooser(i, "Send mail..."));
         } catch (android.content.ActivityNotFoundException ex) {
@@ -135,22 +135,13 @@ public class Results extends AppCompatActivity {
                 Log.d("--------------------","toto2");
                 viewResultat.setText("Vous êtes un physio de gauche ! Trop nul pour réussir la PACES et trop nul pour développer une appli. Mais au moins vous travaillerez à SANOFI et ça c'est la classe !  ");
 
-//                InputStream stream = null;
-//                try {
-//                    stream = getAssets().open("raoult.gif");
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//                GifMovieView view = new GifMovieView(this, stream);
-//                setContentView(view);
-//                //videoScore.setVideoPath("drawable\raoult.gif");
-                //Ion.with(imageScore).load("https://media1.tenor.com/images/819c4ccfdbed99a67a8d8dbc50752315/tenor.gif?itemid=17670144");
                 imageScore.setImageResource (R.drawable.raoult);
 
             }
 
             else {
                 viewResultat.setText("Vous êtes un physio de droite ! Vous vous reposez sur meilleur que vous pour faire vos projets mais par contre il est HORS DE QUESTION de partager les cours ou les annales des années précédentes avec vos camarades! SALE GROS RADIN !!!! ");
+                imageScore.setImageResource (R.drawable.billgates);
             }
         }
 
@@ -160,10 +151,12 @@ public class Results extends AppCompatActivity {
             if (scoreGauche > scoreDroite) {
                 Log.d("--------------------","toto2");
                 viewResultat.setText("Vous êtes un biotech de gauche ! Alors, ça fait quoi de savoir que les GCell feront plus de biotech que vous à la sortie de la fac ??? bisous les rageux ! ");
+                imageScore.setImageResource (R.drawable.melenchon);
             }
 
             else {
                 viewResultat.setText("Vous êtes un biotech de droite !  Je trouve rien à dire sur vous tellement vous êtes insignifiant dans la société. ");
+                imageScore.setImageResource (R.drawable.caca);
             }
         }
 
@@ -174,10 +167,12 @@ public class Results extends AppCompatActivity {
             if (scoreGauche > scoreDroite) {
                 Log.d("--------------------","toto2");
                 viewResultat.setText("Vous êtes un imageur de gauche ! Au fond de vous, vous savez que vous êtes le meilleur mais vous essayez de rester humble devant les minorités (coucou les physios et les stupides) ");
+                imageScore.setImageResource (R.drawable.einstein);
             }
 
             else {
                 viewResultat.setText("Vous êtes un imageur de droite ! Euh ça va le melon ??? Si vous vous la pétiez un peu moins peut-être que vous arriviez mieux à pécho sur Tinder à l'heure d'aujourd'hui ! ;) ");
+                imageScore.setImageResource (R.drawable.lepen);
             }
         }
 
@@ -187,10 +182,12 @@ public class Results extends AppCompatActivity {
             if (scoreGauche > scoreDroite) {
                 Log.d("--------------------","toto2");
                 viewResultat.setText("Pas de chance, vous êtes un stupide de gauche! A défaut de n'avoir aucun avenir, vous pourrez toujours monter une cagnotte pour demander l'intégration de l'écriture inclusive dans les livres scolaires ! ");
+                imageScore.setImageResource (R.drawable.lassalle);
             }
 
             else {
                 viewResultat.setText("Vous êtes un stupide de droite ! Si vous ne trouvez pas de boulot, non ce n'est pas la faute des immigrés mais juste parce que vous êtes con ");
+                imageScore.setImageResource (R.drawable.zemmour);
             }
         }
 
@@ -205,14 +202,17 @@ public class Results extends AppCompatActivity {
                 scoreBiotech == scoreStupide && scoreBiotech !=0 && scoreStupide !=0 && !isImageur && !isPhysio ) {
             if (scoreDroite > scoreGauche){
                 viewResultat.setText("Vous êtes un indécis de droite ! Vous avez le cul entre deux chaises en ce qui concerne les études par contre pour cracher sur les féministes y a du monde !! ");
+                imageScore.setImageResource (R.drawable.travolta);
             }
 
             else if (scoreDroite < scoreGauche){
                 viewResultat.setText("Vous êtes un indécis de gauche ! Vous vous êtes réorienté 4 fois avant de réussir votre L1 mais c'est à cause de la société et du système universitaire patriarcale ! #MENARETRASH ");
+                imageScore.setImageResource (R.drawable.hollande);
             }
 
             else if (scoreDroite==scoreGauche) {
                 viewResultat.setText("Vous êtes un indécis du centre! Remettez vous en question et apprenez à faire des choix ! Et SURTOUT, achetez vous une personnalité !  ");
+                imageScore.setImageResource (R.drawable.macron);
             }
         }
 
@@ -269,30 +269,5 @@ public class Results extends AppCompatActivity {
         Toast.makeText(this, "Sauvegarde terminé dans votre dossier DCIM", Toast.LENGTH_SHORT).show();
     }
 
-//    class GifMovieView extends View {
-//        private Movie mMovie;
-//        private long mMoviestart;
-//
-//        public GifMovieView(Context context, InputStream stream) {
-//            super(context);
-//
-//            InputStream mStream = stream;
-//            mMovie = Movie.decodeStream(mStream);
-//        }
-//
-//        @Override
-//        protected void onDraw(Canvas canvas) {
-//            canvas.drawColor(Color.TRANSPARENT);
-//            super.onDraw(canvas);
-//            final long now = SystemClock.uptimeMillis();
-//            if (mMoviestart == 0) {
-//                mMoviestart = now;
-//            }
-//            final int relTime = (int)((now - mMoviestart) % mMovie.duration());
-//            mMovie.setTime(relTime);
-//            mMovie.draw(canvas, 10, 10);
-//            this.invalidate();
-//        }
-//    }
 
 }

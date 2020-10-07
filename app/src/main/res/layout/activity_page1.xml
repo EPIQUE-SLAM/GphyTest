@@ -122,40 +122,40 @@
         android:id="@+id/imageView6"
         android:layout_width="53dp"
         android:layout_height="45dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintHorizontal_bias="0.726"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744"
-        app:srcCompat="@drawable/annie"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.658"
+        app:srcCompat="@drawable/annie" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="54dp"
         android:layout_height="38dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintHorizontal_bias="0.722"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661"
-        app:srcCompat="@drawable/allan"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.721"
+        app:srcCompat="@drawable/allan" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="56dp"
         android:layout_height="42dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.729"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912"
-        app:srcCompat="@drawable/domi"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.872"
+        app:srcCompat="@drawable/domi" />
 
     <RadioGroup
         android:id="@+id/radioGroup3"
@@ -176,7 +176,7 @@
             android:checked="true"
             android:duplicateParentState="false"
             android:fontFamily="@font/inconsolata"
-            android:text="@string/sexy_annie"
+            android:text="Adannie"
             android:textColor="@color/design_default_color_background" />
 
         <RadioButton
@@ -185,7 +185,7 @@
             android:layout_height="49dp"
             android:buttonTint="#FFFFFF"
             android:fontFamily="@font/inconsolata"
-            android:text="@string/allanus"
+            android:text="Allanis"
             android:textColor="@color/design_default_color_background" />
 
         <RadioButton
@@ -203,7 +203,7 @@
             android:layout_height="48dp"
             android:buttonTint="#FFFFFF"
             android:fontFamily="@font/inconsolata"
-            android:text="@string/dominique_tes_morts"
+            android:text="République Dominicaine"
             android:textColor="@color/design_default_color_background" />
 
     </RadioGroup>
@@ -228,14 +228,14 @@
         android:id="@+id/imageView7"
         android:layout_width="53dp"
         android:layout_height="43dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.72"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83"
-        app:srcCompat="@drawable/pg"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.8"
+        app:srcCompat="@drawable/pg" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
