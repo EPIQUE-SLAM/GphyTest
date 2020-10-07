@@ -5,10 +5,16 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -50,6 +56,7 @@ public class Results extends AppCompatActivity {
     private String mail;
     private TextView viewResultat;
 
+    MediaPlayer media1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -246,12 +253,50 @@ public class Results extends AppCompatActivity {
             e.printStackTrace();
             Log.e(APP_TAG,"Error I/O",e);
         }
+
     }
 
-    public void onClickSave(View view){
+    public void onClickSave(View view) throws InterruptedException {
         write_historic_in_file();
         Toast.makeText(this, "Sauvegarde terminé dans votre dossier DCIM", Toast.LENGTH_SHORT).show();
+        vibrate(150);
+        Thread.sleep(600);
+        vibrate(150);
+        Thread.sleep(600);
+        vibrate(150);
+        Thread.sleep(250);
+        vibrate(150);
+        Thread.sleep(250);
+        vibrate(150);
+        Thread.sleep(520);
+        vibrate(150);
+        Thread.sleep(250);
+        vibrate(150);
+        Thread.sleep(250);
+        vibrate(150);
+        Thread.sleep(250);
+        vibrate(150);
+        Thread.sleep(400);
+        vibrate(150);
+        Thread.sleep(350);
+        vibrate(150);
+        Thread.sleep(250);
     }
 
-
+    public void vibrate(long duration_ms) {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if(duration_ms < 1)
+            duration_ms = 1;
+        if(v != null && v.hasVibrator()) {
+            // Attention changement comportement avec API >= 26 (cf doc)
+            if(Build.VERSION.SDK_INT >= 26) {
+                v.vibrate(VibrationEffect.createOneShot(duration_ms,
+                        VibrationEffect.DEFAULT_AMPLITUDE));
+            }
+            else {
+                v.vibrate(duration_ms);
+            }
+        }
+        // sinon il n'y a pas de mécanisme de vibration
+    }
 }
