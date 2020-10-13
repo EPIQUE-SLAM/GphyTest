@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 
+/**
+ * Classe de la page 1 qui contient des questions
+ */
 public class Page1 extends AppCompatActivity {
 
     static private int compteurBiotech1;
@@ -36,12 +39,12 @@ public class Page1 extends AppCompatActivity {
 
     private ProgressBar progressBar1;
 
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
-
+    /**
+     * @param savedInstanceState
+     *
+     * Classe utilisée lors de la creation de la page
+     * On y instancie les différents widgets et variables
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +69,12 @@ public class Page1 extends AppCompatActivity {
         progressBar1.setProgress(25);
     }
 
+    /**
+     * @param v
+     *
+     * Methode appelé lors du changement de page
+     * On y incremente tout les compteurs en fonctions des reponses
+     */
     public void onClick(View v) {
 
         if (gaucheButton.isChecked()) {
@@ -114,30 +123,92 @@ public class Page1 extends AppCompatActivity {
         Log.d("---------------------------", String.valueOf(compteurBiotech1));
     }
 
+    /**
+     * Methode pour rendre responsive les images
+     */
+    public void onClickAllan(View view){
+        allanButton.setChecked(true);
+    }
+
+    /**
+     * Methode pour rendre responsive les images
+     */
+    public void onClickAnnie(View view){
+        annieButton.setChecked(true);
+    }
+
+    /**
+     * Methode pour rendre responsive les images
+     */
+    public void onClickDomi(View view){
+        domiButton.setChecked(true);
+    }
+
+    /**
+     * Methode pour rendre responsive les images
+     */
+    public void onClickPG(View view){
+        pgButton.setChecked(true);
+    }
+
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     static public int getCompteurBiotech1() {
         return compteurBiotech1;
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurPhysio1() {
         return compteurPhysio1;
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurImageur1() {
         return compteurImageur1;
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurGauche1() {
         return compteurGauche1;
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurDroite1() {
         return compteurDroite1;
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurStupidite1() {
         return compteurStupidite1;
     }
 
+    /**
+     * Methode appelée après une pause (lors d'un retour par exemple avec finish())
+     * Permet de remettre les compteurs static à zero lors d'un retour
+     */
     @Override
     protected void onResume() {
 

@@ -77,29 +77,38 @@
             android:id="@+id/racletteButton"
             android:layout_width="match_parent"
             android:layout_height="43dp"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:checked="true"
             android:fontFamily="@font/inconsolata"
             android:text="@string/grosse_raclette_sa_m_re"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
         <RadioButton
             android:id="@+id/painButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:fontFamily="@font/inconsolata"
             android:text="@string/pain_p_t"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
         <RadioButton
             android:id="@+id/pateButton"
             android:layout_width="match_parent"
             android:layout_height="42dp"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:fontFamily="@font/inconsolata"
             android:text="@string/p_tes_au_p_tes"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
     </RadioGroup>
 
@@ -123,6 +132,7 @@
         android:layout_width="53dp"
         android:layout_height="45dp"
         android:contentDescription="@string/todo"
+        android:onClick="onClickAnnie"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.726"
@@ -136,6 +146,7 @@
         android:layout_width="54dp"
         android:layout_height="38dp"
         android:contentDescription="@string/todo"
+        android:onClick="onClickAllan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.722"
@@ -149,6 +160,7 @@
         android:layout_width="56dp"
         android:layout_height="42dp"
         android:contentDescription="@string/todo"
+        android:onClick="onClickDomi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.724"
@@ -172,39 +184,51 @@
             android:id="@+id/annieButton"
             android:layout_width="205dp"
             android:layout_height="51dp"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:checked="true"
             android:duplicateParentState="false"
             android:fontFamily="@font/inconsolata"
-            android:text="Adannie"
-            android:textColor="@color/design_default_color_background" />
+            android:text="@string/adannie"
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
         <RadioButton
             android:id="@+id/allanButton"
             android:layout_width="203dp"
             android:layout_height="49dp"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:fontFamily="@font/inconsolata"
-            android:text="Allanis"
-            android:textColor="@color/design_default_color_background" />
+            android:text="@string/allanis"
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
         <RadioButton
             android:id="@+id/pgButton"
             android:layout_width="203dp"
             android:layout_height="56dp"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:fontFamily="@font/inconsolata"
             android:text="@string/patrick_g_char"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
         <RadioButton
             android:id="@+id/domiButton"
             android:layout_width="204dp"
             android:layout_height="48dp"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:fontFamily="@font/inconsolata"
-            android:text="République Dominicaine"
-            android:textColor="@color/design_default_color_background" />
+            android:text="@string/r_publique_dominicaine"
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
     </RadioGroup>
 
@@ -229,6 +253,7 @@
         android:layout_width="53dp"
         android:layout_height="43dp"
         android:contentDescription="@string/todo"
+        android:onClick="onClickPG"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.72"
@@ -252,29 +277,38 @@
             android:id="@+id/noneButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:checked="true"
             android:fontFamily="@font/inconsolata"
             android:text="@string/je_ne_regarde_pas_j_aime_le_danger"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
         <RadioButton
             android:id="@+id/gaucheButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:fontFamily="@font/inconsolata"
             android:text="@string/a_gauche"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
         <RadioButton
             android:id="@+id/droiteButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="#FFFFFF"
+            android:buttonTint="#B32121"
             android:fontFamily="@font/inconsolata"
             android:text="@string/a_droite"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#CD2222"
+            android:textColorHint="#D51E1E"
+            android:textColorLink="#E81616" />
 
     </RadioGroup>
 

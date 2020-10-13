@@ -4,7 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".Page1">
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="263dp"
+        android:layout_height="19dp"
+        android:background="@color/design_default_color_background"
+        android:progressTint="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/barre_de_progression"
+        android:textColor="@color/design_default_color_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -18,30 +46,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/gphy" />
-
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="263dp"
-        android:layout_height="19dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/barre_de_progression"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -58,20 +62,26 @@
             android:id="@+id/painButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/pain_p_t" />
+            android:buttonTint="#B32323"
+            android:text="@string/pain_p_t"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/pateButton"
             android:layout_width="358dp"
             android:layout_height="wrap_content"
-            android:text="@string/p_tes_au_p_tes" />
+            android:buttonTint="#B32323"
+            android:text="@string/p_tes_au_p_tes"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/racletteButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#B32323"
             android:checked="true"
-            android:text="@string/grosse_raclette_sa_m_re" />
+            android:text="@string/grosse_raclette_sa_m_re"
+            android:textColor="#FFFFFF" />
 
     </RadioGroup>
 
@@ -81,6 +91,7 @@
         android:layout_height="23dp"
         android:text="@string/choose_your_fighter"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,6 +105,7 @@
         android:layout_width="70dp"
         android:layout_height="48dp"
         android:contentDescription="@string/todo"
+        android:onClick="onClickAnnie"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.332"
@@ -107,6 +119,7 @@
         android:layout_width="73dp"
         android:layout_height="44dp"
         android:contentDescription="@string/todo"
+        android:onClick="onClickAllan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.334"
@@ -120,6 +133,7 @@
         android:layout_width="58dp"
         android:layout_height="74dp"
         android:contentDescription="@string/todo"
+        android:onClick="onClickDomi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.328"
@@ -143,26 +157,34 @@
             android:id="@+id/allanButton"
             android:layout_width="203dp"
             android:layout_height="49dp"
-            android:text="@string/allanus" />
+            android:buttonTint="#B32323"
+            android:text="@string/allanus"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/annieButton"
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:buttonTint="#B32323"
             android:checked="true"
-            android:text="@string/sexy_annie" />
+            android:text="@string/sexy_annie"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/pgButton"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="@string/patrick_g_char" />
+            android:buttonTint="#B32323"
+            android:text="@string/patrick_g_char"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/domiButton"
             android:layout_width="204dp"
             android:layout_height="48dp"
-            android:text="@string/dominique_tes_morts" />
+            android:buttonTint="#B32323"
+            android:text="@string/dominique_tes_morts"
+            android:textColor="#FFFFFF" />
 
     </RadioGroup>
 
@@ -172,6 +194,7 @@
         android:layout_height="24dp"
         android:text="@string/le_soir_au_d_ner_tu_es_plut_t"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -185,6 +208,7 @@
         android:layout_width="63dp"
         android:layout_height="60dp"
         android:contentDescription="@string/todo"
+        android:onClick="onClickPG"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.33"
@@ -208,20 +232,26 @@
             android:id="@+id/gaucheButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/a_gauche" />
+            android:buttonTint="#B32323"
+            android:text="@string/a_gauche"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/droiteButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/a_droite" />
+            android:buttonTint="#B32323"
+            android:text="@string/a_droite"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/noneButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#B32323"
             android:checked="true"
-            android:text="@string/je_ne_regarde_pas_j_aime_le_danger" />
+            android:text="@string/je_ne_regarde_pas_j_aime_le_danger"
+            android:textColor="#FFFFFF" />
 
     </RadioGroup>
 
@@ -244,6 +274,7 @@
         android:layout_height="24dp"
         android:text="@string/de_quel_c_t_regarde_tu_avant_de_traverser"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
