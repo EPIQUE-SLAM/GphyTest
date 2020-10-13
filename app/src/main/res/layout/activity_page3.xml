@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inconsolata"
-        android:text="De quel sexe êtes-vous?"
+        android:text="@string/de_quel_sexe_tes_vous"
         android:textColor="@color/design_default_color_background"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inconsolata"
-        android:text="Quelle est votre langage préféré"
+        android:text="@string/quelle_est_votre_langage_pr_f_r"
         android:textColor="@color/design_default_color_background"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -87,7 +87,7 @@
         android:layout_height="48dp"
         android:fontFamily="@font/inconsolata"
         android:onClick="onClickNext"
-        android:text="Suivant"
+        android:text="@string/suivant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.949"
@@ -101,7 +101,7 @@
         android:layout_height="48dp"
         android:fontFamily="@font/inconsolata"
         android:onClick="onClickBack"
-        android:text="Retour"
+        android:text="@string/retour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.059"
@@ -141,7 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inconsolata"
-        android:text="Situez vous"
+        android:text="@string/situez_vous"
         android:textColor="@color/design_default_color_background"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -156,7 +156,7 @@
         android:id="@+id/imageView5"
         android:layout_width="86dp"
         android:layout_height="102dp"
-        android:contentDescription="todo"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.973"
@@ -169,7 +169,7 @@
         android:id="@+id/imageView6"
         android:layout_width="81dp"
         android:layout_height="100dp"
-        android:contentDescription="todo"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.032"
@@ -205,37 +205,37 @@
             android:id="@+id/rbBtnJava"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#C32424"
             android:checked="true"
             android:fontFamily="@font/inconsolata"
-            android:text="Le java pour les rois"
+            android:text="@string/le_java_pour_les_rois"
             android:textColor="@color/design_default_color_background" />
 
         <RadioButton
             android:id="@+id/rbBtnAda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#C32424"
             android:fontFamily="@font/inconsolata"
-            android:text="L'ada on est là"
+            android:text="@string/l_ada_on_est_l"
             android:textColor="@color/design_default_color_background" />
 
         <RadioButton
             android:id="@+id/rbBtnSQL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#C32424"
             android:fontFamily="@font/inconsolata"
-            android:text="SQL donne des ailes"
+            android:text="@string/sql_donne_des_ailes"
             android:textColor="@color/design_default_color_background" />
 
         <RadioButton
             android:id="@+id/rbBtnCPP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#C32424"
             android:fontFamily="@font/inconsolata"
-            android:text="Le C ++ tout dans l'anus"
+            android:text="@string/le_c_tout_dans_l_anus"
             android:textColor="@color/design_default_color_background" />
 
     </RadioGroup>
@@ -254,28 +254,28 @@
             android:id="@+id/rbBtnHomme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#C32424"
             android:fontFamily="@font/inconsolata"
-            android:text="Homme"
+            android:text="@string/homme"
             android:textColor="@color/design_default_color_background" />
 
         <RadioButton
             android:id="@+id/rbBtnFemme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#C32424"
             android:fontFamily="@font/inconsolata"
-            android:text="Femme"
+            android:text="@string/femme"
             android:textColor="@color/design_default_color_background" />
 
         <RadioButton
             android:id="@+id/rbBtnAutre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#C32424"
             android:checked="true"
             android:fontFamily="@font/inconsolata"
-            android:text="Autres"
+            android:text="@string/autres"
             android:textColor="@color/design_default_color_background" />
     </RadioGroup>
 

@@ -282,7 +282,7 @@
             android:fontFamily="@font/inconsolata"
             android:text="@string/je_ne_regarde_pas_j_aime_le_danger"
             android:textColor="@color/design_default_color_background"
-            android:textColorHighlight="#CD2222"
+            android:textColorHighlight="#FFFFFF"
             android:textColorHint="#D51E1E"
             android:textColorLink="#E81616" />
 
@@ -316,6 +316,7 @@
         android:id="@+id/btnNext1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/inconsolata"
         android:onClick="onClick"
         android:text="@string/suivant"
         app:layout_constraintBottom_toBottomOf="parent"

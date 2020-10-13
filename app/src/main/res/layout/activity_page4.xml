@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".Page4">
 
     <CheckBox
@@ -12,6 +13,7 @@
         android:layout_height="30dp"
         android:fontFamily="@font/inconsolata"
         android:text="@string/l_anglais_meh"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
@@ -25,6 +27,7 @@
         android:layout_height="30dp"
         android:fontFamily="@font/inconsolata"
         android:text="@string/physio_pour_les_prolo"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
@@ -38,6 +41,7 @@
         android:layout_height="30dp"
         android:fontFamily="@font/inconsolata"
         android:text="@string/imagerie_les_sans_vie"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
@@ -51,6 +55,7 @@
         android:layout_height="30dp"
         android:fontFamily="@font/inconsolata"
         android:text="@string/biotech_no_comment"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
@@ -64,6 +69,7 @@
         android:layout_height="31dp"
         android:fontFamily="@font/inconsolata"
         android:text="@string/la_mitbs_c_est_la_hess"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.93"
@@ -78,6 +84,7 @@
         android:layout_height="31dp"
         android:fontFamily="@font/inconsolata"
         android:text="@string/la_bdd_pour_les_f_l_s"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.935"
@@ -92,6 +99,7 @@
         android:layout_height="31dp"
         android:fontFamily="@font/inconsolata"
         android:text="@string/la_coopoo_zetes_des_fous"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.93"
@@ -105,6 +113,7 @@
         android:layout_height="31dp"
         android:fontFamily="@font/inconsolata"
         android:text="@string/l_ihm_c_est_a_qu_on_aime"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.93"
@@ -130,6 +139,7 @@
         android:layout_height="60dp"
         android:fontFamily="@font/inconsolata"
         android:text="@string/l_l_phant_est_plus_fort_que_le_rhinoc_ros"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -144,6 +154,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/inconsolata"
         android:text="@string/quelle_sont_vos_ue_pr_f_r_es"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -184,6 +195,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/inconsolata"
         android:text="@string/barre_de_progression"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -194,8 +206,14 @@
     <ProgressBar
         android:id="@+id/progressBar4"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="263dp"
-        android:layout_height="19dp"
+        android:layout_width="254dp"
+        android:layout_height="21dp"
+        android:background="@color/common_google_signin_btn_text_dark_pressed"
+        android:backgroundTint="#493434"
+        android:foregroundTint="#EF2727"
+        android:progressBackgroundTint="#FFEFEF"
+        android:progressDrawable="@drawable/annie"
+        android:progressTint="@color/design_default_color_error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.898"
@@ -220,9 +238,12 @@
         android:id="@+id/switchElephRhino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:buttonTint="#8A3131"
         android:onClick="onClickElephant"
         android:textOff="@string/ne_sous_estimer_pas_l_l_phant"
         android:textOn="@string/elephant_powa"
+        android:thumbTint="#AE2727"
+        android:trackTint="#BA3A3A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.121"
@@ -236,6 +257,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/inconsolata"
         android:text="@string/activer_le_bouton_pour_confirmer"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -258,26 +280,46 @@
             android:id="@+id/rbPLB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#9F2828"
             android:checked="true"
-            android:text="@string/plb_des_familles" />
+            android:text="@string/plb_des_familles"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#B62323"
+            android:textColorHint="#AA2C2C"
+            android:textColorLink="#B61C1C" />
 
         <RadioButton
             android:id="@+id/rbMaison"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/gros_resoi_chez_un_bro" />
+            android:buttonTint="#9F2828"
+            android:text="@string/gros_resoi_chez_un_bro"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#B62323"
+            android:textColorHint="#AA2C2C"
+            android:textColorLink="#B61C1C" />
 
         <RadioButton
             android:id="@+id/rbWallaby"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/vieux_wallaby_s_clat" />
+            android:buttonTint="#9F2828"
+            android:text="@string/vieux_wallaby_s_clat"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#B62323"
+            android:textColorHint="#AA2C2C"
+            android:textColorLink="#B61C1C" />
 
         <RadioButton
             android:id="@+id/rbRevision"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/c_mor_je_go_reviser" />
+            android:buttonTint="#9F2828"
+            android:text="@string/c_mor_je_go_reviser"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#B62323"
+            android:textColorHint="#AA2C2C"
+            android:textColorLink="#B61C1C" />
     </RadioGroup>
 
     <TextView
@@ -285,6 +327,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textview"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.369"

@@ -81,13 +81,13 @@
     <string name="quelle_est_votre_langage_pr_f_r">Quelle est votre langage préféré</string>
     <string name="situez_vous">Situez vous</string>
     <string name="todo">todo</string>
-    <string name="l_ada_on_est_l">L\'ada on est là</string>
     <string name="sql_donne_des_ailes">SQL donne des ailes</string>
-    <string name="le_c_tout_dans_l_anus">Le C ++ tout dans l\'anus</string>
     <string name="homme">Homme</string>
     <string name="femme">Femme</string>
     <string name="autres">Autres</string>
+    <string name="consultez_vos_r_sultats_par_mail">Consultez vos résultats par mail :</string>
     <string name="suivant">Suivant</string>
     <string name="retour">Retour</string>
-    <string name="consultez_vos_r_sultats_par_mail">Consultez vos résultats par mail :</string>
+    <string name="le_c_tout_dans_l_anus">Le C ++ tout dans l\'anus</string>
+    <string name="l_ada_on_est_l">L\'ada on est là</string>
 </resources>

@@ -12,6 +12,7 @@
         android:id="@+id/textView10"
         android:layout_width="300dp"
         android:layout_height="27dp"
+        android:fontFamily="@font/inconsolata"
         android:text="@string/choisie_la_bonne_conjugaison"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
@@ -43,6 +44,7 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/inconsolata"
         android:text="@string/barre_de_progression"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,6 +71,7 @@
         android:id="@+id/btnRetour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/inconsolata"
         android:onClick="onClickPrevious"
         android:text="@string/retour"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,6 +85,7 @@
         android:id="@+id/textView6"
         android:layout_width="300dp"
         android:layout_height="27dp"
+        android:fontFamily="@font/inconsolata"
         android:text="@string/note_ton_amour_pour_la_coopoo"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
@@ -98,6 +102,7 @@
         android:id="@+id/textView9"
         android:layout_width="300dp"
         android:layout_height="27dp"
+        android:fontFamily="@font/inconsolata"
         android:text="@string/quelle_est_ta_boisson_f_tiche"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
@@ -114,6 +119,7 @@
         android:id="@+id/btnNext2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/inconsolata"
         android:onClick="onClick"
         android:text="@string/suivant"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -158,8 +164,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/design_default_color_error"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#BC3333"
             android:checked="true"
+            android:fontFamily="@font/inconsolata"
             android:text="@string/le_th_de_la_cafet"
             android:textColor="@color/design_default_color_background" />
 
@@ -168,7 +175,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/design_default_color_error"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#BC3333"
+            android:fontFamily="@font/inconsolata"
             android:text="@string/le_whisky_de_4h_du_mat"
             android:textColor="@color/design_default_color_background" />
 
@@ -177,7 +185,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/design_default_color_error"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#BC3333"
+            android:fontFamily="@font/inconsolata"
             android:text="@string/la_castel_du_plb"
             android:textColor="@color/design_default_color_background" />
 
@@ -186,7 +195,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/design_default_color_error"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#BC3333"
+            android:fontFamily="@font/inconsolata"
             android:text="@string/le_beaujolais_nouveau"
             android:textColor="@color/design_default_color_background" />
 
@@ -206,8 +216,9 @@
             android:id="@+id/incluButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#BC3333"
             android:checked="true"
+            android:fontFamily="@font/inconsolata"
             android:text="@string/toustes_les_confin_e_s_sont_postif_ve_s"
             android:textColor="@color/design_default_color_background" />
 
@@ -215,7 +226,8 @@
             android:id="@+id/mascuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#BC3333"
+            android:fontFamily="@font/inconsolata"
             android:text="@string/tous_les_confin_s_sont_positifs"
             android:textColor="@color/design_default_color_background" />
 
@@ -223,7 +235,8 @@
             android:id="@+id/parenthButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/design_default_color_background"
+            android:buttonTint="#BC3333"
+            android:fontFamily="@font/inconsolata"
             android:text="@string/tou_te_s_les_confin_es_sont_positif_ve_s"
             android:textColor="@color/design_default_color_background" />
 
