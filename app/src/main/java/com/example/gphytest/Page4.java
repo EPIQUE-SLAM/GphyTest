@@ -209,8 +209,8 @@ public class Page4 extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) { // S'exécute sur le ThreadUI après doInBackground
             super.onPostExecute(aVoid);
             // ATTENTION, il faut adapter le code ci-dessous avec vos controles graphiques.
-            //InfoPokemon.this.txtViewType.setText(resname);
-            media1 = MediaPlayer.create(getBaseContext(), R.raw.elephant);
+            //InfoPokemon.this.txtViewType.setText(resname)
+            media1 = MediaPlayer.create(getBaseContext(),R.raw.elephant);
             if (media1.isPlaying()){
                 media1.stop();
             }
