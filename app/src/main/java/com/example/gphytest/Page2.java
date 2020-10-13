@@ -71,7 +71,6 @@ public class Page2 extends AppCompatActivity {
             compteurImageur2 = compteurImageur2 + 3;
         }
 
-
         Intent intentPage2 = new Intent(this, Page3.class);
         startActivity(intentPage2);
     }
