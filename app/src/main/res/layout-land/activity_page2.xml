@@ -16,10 +16,10 @@
         android:progressTint="@color/design_default_color_error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <TextView
         android:id="@+id/textView16"
@@ -29,10 +29,10 @@
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintVertical_bias="0.029" />
 
     <ImageView
         android:id="@+id/imageScore"
@@ -120,22 +120,28 @@
             android:id="@+id/mascuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
             android:text="Tous les confinés sont positifs"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#951E1E" />
 
         <RadioButton
             android:id="@+id/parenthButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
             android:text="Tou(te)s les confiné(es) sont positif(ve)s"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#951E1E" />
 
         <RadioButton
             android:id="@+id/incluButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
             android:text="Toustes les confiné.e.s sont postif.ve.s"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#951E1E" />
     </RadioGroup>
 
     <TextView
@@ -169,29 +175,37 @@
             android:id="@+id/biereButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
             android:text="La castel du PLB"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#951E1E" />
 
         <RadioButton
             android:id="@+id/whiskyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
             android:text="Le whisky de 4h du mat"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#951E1E" />
 
         <RadioButton
             android:id="@+id/vinButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
             android:text="Le Beaujolais nouveau"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#951E1E" />
 
         <RadioButton
             android:id="@+id/theButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
             android:text="Le thé de la cafet"
-            android:textColor="@color/design_default_color_background" />
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="#951E1E" />
 
     </RadioGroup>
 

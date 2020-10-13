@@ -211,7 +211,6 @@ public class Page1 extends AppCompatActivity {
      */
     @Override
     protected void onResume() {
-
         super.onResume();
         Log.d("---------------------------", "start resume");
         Log.d("---------------------------", String.valueOf(compteurBiotech1));
