@@ -28,6 +28,9 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Date;
 
+/**
+ * Classe qui permet d'fficher les reusltats finals
+ */
 public class Results extends AppCompatActivity {
 
     private static final String APP_TAG = "GphyTest";
@@ -58,6 +61,12 @@ public class Results extends AppCompatActivity {
 
     MediaPlayer media1;
 
+    /**
+     * @param savedInstanceState
+     *
+     * Classe utilisée lors de la creation de la page
+     * On y instancie les différents widgets et variables
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,6 +106,11 @@ public class Results extends AppCompatActivity {
         verifyStoragePermissions(this);
     }
 
+    /**
+     * @param v
+     *
+     * Permet d'envoyer les resultats par mail
+     */
     public void sendResult(View v){
 
         mail = inputMail.getText().toString();
@@ -112,11 +126,9 @@ public class Results extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
-
+    /**
+     * Classe qui va comparer les différents resultats et afficher une description personalisée pour chacun d'entre eux
+     */
     public void generalResult (){
 
         if ((scorePhysio > scoreBiotech) && (scorePhysio > scoreImageur)  && (scorePhysio > scoreStupide)) {
@@ -184,6 +196,9 @@ public class Results extends AppCompatActivity {
 
     }
 
+    /**
+     * Comme la méthode genralresult() sauf que celle-ci intervient en cas d'égalité des deux plus grands resultats
+     */
     public void equalResults(){
         if(     scorePhysio == scoreImageur && scorePhysio !=0 && scoreImageur !=0 && !isBiotech && !isStupide ||
                 scorePhysio==scoreBiotech && scorePhysio !=0 && scoreBiotech !=0 && !isImageur && !isStupide ||
@@ -215,6 +230,12 @@ public class Results extends AppCompatActivity {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
+
+    /**
+     * @param activity
+     *
+     * Permet d'obtenir la permission de l'utilisateur (et du telephone surtout) pour pouvoir sauvegarder les resultats en local
+     */
     public static void verifyStoragePermissions(Activity activity) {
 // Vérifie si nous avons les droits d'écriture
         int permission = ActivityCompat.checkSelfPermission(activity,
@@ -229,6 +250,9 @@ public class Results extends AppCompatActivity {
         }
     }
 
+    /**
+     * Permet de generer un fichier texte en local qui contient les resultats
+     */
     public void write_historic_in_file() {
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
         File fileout = new File(folder, "GphyTest.txt");
@@ -256,9 +280,15 @@ public class Results extends AppCompatActivity {
 
     }
 
+    /**
+     * @param view
+     * @throws InterruptedException
+     *
+     * Permet lors du clique, de sauvegarder les données en local
+     */
     public void onClickSave(View view) throws InterruptedException {
         write_historic_in_file();
-        Toast.makeText(this, "Sauvegarde terminé dans votre dossier DCIM", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Sauvegarde en cours", Toast.LENGTH_SHORT).show();
         vibrate(150);
         Thread.sleep(600);
         vibrate(150);
@@ -281,8 +311,14 @@ public class Results extends AppCompatActivity {
         Thread.sleep(350);
         vibrate(150);
         Thread.sleep(250);
+        Toast.makeText(this, "Sauvegarde terminé dans votre dossier DCIM", Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * @param duration_ms
+     *
+     * Permet de generer une vibration
+     */
     public void vibrate(long duration_ms) {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if(duration_ms < 1)

@@ -26,7 +26,6 @@
     <string name="l_ihm_c_est_a_qu_on_aime">L\'IHM, c\'est ça qu\'on aime</string>
     <string name="la_coopoo_zetes_des_fous">La COOPOO, zetes des fous</string>
     <string name="activez_le_bouton_pour_comfirmer">Activez le bouton pour comfirmer</string>
-    <string name="retour">Retour</string>
     <string name="le_whisky_de_4h_du_mat">Le whisky de 4h du mat</string>
     <string name="tous_les_confin_s_sont_positifs">Tous les confinés sont positifs</string>
     <string name="choisie_la_bonne_conjugaison">Choisie la bonne conjugaison :</string>
@@ -57,7 +56,6 @@
     <string name="patrick_g_char">Patrick Géchar</string>
     <string name="le_soir_au_d_ner_tu_es_plut_t">Le soir au dîner tu es plutôt :</string>
     <string name="dominique_tes_morts">Dominique Tes Morts</string>
-    <string name="suivant">Suivant</string>
     <string name="a_gauche">A gauche</string>
     <string name="grosse_raclette_sa_m_re">Grosse raclette sa mère</string>
     <string name="sexy_annie">Sexy Annie</string>
@@ -91,4 +89,5 @@
     <string name="autres">Autres</string>
     <string name="suivant">Suivant</string>
     <string name="retour">Retour</string>
+    <string name="consultez_vos_r_sultats_par_mail">Consultez vos résultats par mail :</string>
 </resources>

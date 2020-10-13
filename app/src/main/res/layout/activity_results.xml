@@ -14,7 +14,7 @@
         android:layout_width="281dp"
         android:layout_height="35dp"
         android:fontFamily="@font/inconsolata"
-        android:text="Consultez vos résultats par mail :"
+        android:text="@string/consultez_vos_r_sultats_par_mail"
         android:textColor="@color/design_default_color_background"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
