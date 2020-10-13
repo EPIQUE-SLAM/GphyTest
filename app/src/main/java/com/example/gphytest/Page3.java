@@ -12,6 +12,9 @@ import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+/**
+ * Classe de la page 2 qui contient des questions
+ */
 public class Page3 extends AppCompatActivity {
 
     private Button btnNext3;
@@ -38,6 +41,12 @@ public class Page3 extends AppCompatActivity {
     private static int compteurGauche3;
     private static int compteurStupidite3;
 
+    /**
+     * @param savedInstanceState
+     *
+     * Classe utilisée lors de la creation de la page
+     * On y instancie les différents widgets et variables
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,17 +74,37 @@ public class Page3 extends AppCompatActivity {
         seekBar.setMax(100);
         seekBar.setMin(0);
         seekBarChangedValue = 50;
+        /**
+         * Methode qui applique un listener sur une seekBar
+         */
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            /**
+             * @param seekBar
+             * @param progress
+             * @param fromUser
+             *
+             * Permet d'actualiser la valeur de la seekBar
+             */
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 seekBarChangedValue = progress;
             }
 
+            /**
+             * @param seekBar
+             *
+             * Methode de base qui permet de faire des actions lors de l'appui sur la seekBar
+             */
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
 
             }
 
+            /**
+             * @param seekBar
+             *
+             * Methode de base qui permet de faire des actions lors du relachemement sur la seekBar
+             */
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 actualizeProgresseBar(seekBarChangedValue);
@@ -85,6 +114,10 @@ public class Page3 extends AppCompatActivity {
         txtViewProgrBar.setText("Vous êtes plutôt indecis\n ¯\\_(ツ)_/¯");
     }
 
+    /**
+     * Methode appelée après une pause (lors d'un retour par exemple avec finish())
+     * Permet de remettre les compteurs static à zero lors d'un retour
+     */
     @Override
     protected void onResume() {
         super.onResume();
@@ -100,14 +133,29 @@ public class Page3 extends AppCompatActivity {
         Log.d("###############################","onResume finish");
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurGauche3() {
         return compteurGauche3;
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurPhysio3() {
         return compteurPhysio3;
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurImageur3() {
         return compteurImageur3;
     }
@@ -116,18 +164,38 @@ public class Page3 extends AppCompatActivity {
         return compteurStupidite3;
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurBiotech3() {
         return compteurBiotech3;
     }
 
+    /**
+     * @return int
+     *
+     * Retourne le compteur static qui sera recuperé sue la dernier page
+     */
     public static int getCompteurDroite3() {
         return compteurDroite3;
     }
 
+    /**
+     * @param view
+     *
+     * Reviens à la page precedente
+     */
     public void onClickBack(View view) {
         finish();
     }
 
+    /**
+     * @param progress
+     *
+     * Methode qui permet d'afficher un texte en fonction de la valeur de la barre
+     */
     public void actualizeProgresseBar(Integer progress) {
         String strTemp = "La barre est";
         if (seekBarChangedValue < 26) {
@@ -144,6 +212,12 @@ public class Page3 extends AppCompatActivity {
         txtViewProgrBar.setText(strTemp);
     }
 
+    /**
+     * @param view
+     *
+     * Methode appelé lors du changement de page
+     * On y incremente tout les compteurs en fonctions des reponses
+     */
     public void onClickNext(View view){
         if (seekBarChangedValue < 26){
             compteurGauche3=compteurGauche3+2;
