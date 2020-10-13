@@ -74,6 +74,7 @@ public class Page4 extends AppCompatActivity {
         switchElephRhino = findViewById(R.id.switchElephRhino);
 
         txtViewSwitch = findViewById(R.id.txtViewSwitch);
+        txtViewSwitch.setText("Quel choix allez vous faire ?");
 
         song = new Song();
     }
@@ -179,7 +180,7 @@ public class Page4 extends AppCompatActivity {
     public void onClickElephant(View view) {
         if (switchElephRhino.isChecked()) {
             txtViewSwitch.setText(switchElephRhino.getTextOn().toString());
-            song.execute();
+            song.onPostExecute(null);
         } else if (!switchElephRhino.isChecked()) {
             txtViewSwitch.setText(switchElephRhino.getTextOff().toString());
         }
@@ -210,6 +211,9 @@ public class Page4 extends AppCompatActivity {
             // ATTENTION, il faut adapter le code ci-dessous avec vos controles graphiques.
             //InfoPokemon.this.txtViewType.setText(resname);
             media1 = MediaPlayer.create(getBaseContext(), R.raw.elephant);
+            if (media1.isPlaying()){
+                media1.stop();
+            }
             media1.start();
         }
 
