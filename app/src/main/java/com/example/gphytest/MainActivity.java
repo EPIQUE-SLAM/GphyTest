@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickExit(View view) {
         finish();
+        media1.stop();
     }
 
     class Song extends AsyncTask<Void, Integer, Void> {
