@@ -8,7 +8,6 @@
     <string name="commencer_le_test">Commencer le test</string>
     <string name="quitter">Quitter</string>
     <string name="quel_gphy_est_tu">Quel Gphy est-tu ?</string>
-    <string name="situez_vous">Situez vous ?</string>
     <string name="progression">Progression</string>
     <string name="gauche">Gauche</string>
     <string name="imageur">Imageur</string>
@@ -16,9 +15,7 @@
     <string name="biotech">Biotech</string>
     <string name="stupide">Stupide</string>
     <string name="droite">Droite</string>
-    <string name="quelle_est_votre_langage_pr_f_r">Quelle est votre langage préféré ?</string>
     <string name="le_java_pour_les_roi">Le java pour les roi</string>
-    <string name="l_ada_on_est_l">L\'Ada, on est là ¯\\_(ツ)_/¯</string>
     <string name="quelle_sont_vos_ue_pr_f_r_es">Quelle sont vos UE préférées ?</string>
     <string name="la_bdd_c_est_pour_les_pd">La BDD, c\'est pour les PD</string>
     <string name="physio_pour_les_prolo">Physio, pour les prolo</string>
@@ -28,12 +25,6 @@
     <string name="biotech_no_comment">Biotech, no comment</string>
     <string name="l_ihm_c_est_a_qu_on_aime">L\'IHM, c\'est ça qu\'on aime</string>
     <string name="la_coopoo_zetes_des_fous">La COOPOO, zetes des fous</string>
-    <string name="sql_donnes_des_ailes">SQL, donnes des ailes</string>
-    <string name="femme">Femme</string>
-    <string name="autres">Autres</string>
-    <string name="homme">Homme</string>
-    <string name="de_quel_sexe_tes_vous">De quel sexe êtes vous ?</string>
-    <string name="le_c_tout_dans_l_anus">Le C++, tout dans l\'anus</string>
     <string name="activez_le_bouton_pour_comfirmer">Activez le bouton pour comfirmer</string>
     <string name="retour">Retour</string>
     <string name="le_whisky_de_4h_du_mat">Le whisky de 4h du mat</string>
@@ -73,7 +64,6 @@
     <string name="p_tes_au_p_tes">Pâtes au pâtes</string>
     <string name="allanus">Allanus</string>
     <string name="a_droite">A droite</string>
-    <string name="todo">TODO</string>
     <string name="je_ne_regarde_pas_j_aime_le_danger">Je ne regarde pas, j\'aime le danger</string>
     <string name="test">Test</string>
     <string name="elephant_powa">Elephant POWA !!!!</string>
@@ -85,4 +75,20 @@
     <string name="c_mor_je_go_reviser">C mor, je go reviser...</string>
     <string name="sauvegarder">Sauvegarder</string>
     <string name="l_l_phant_est_plus_fort_que_le_rhinoc_ros">L\'éléphant est plus fort que le rhinocéros</string>
+    <string name="adannie">Adannie</string>
+    <string name="r_publique_dominicaine">République Dominicaine</string>
+    <string name="allanis">Allanis</string>
+    <string name="de_quel_sexe_tes_vous">De quel sexe êtes-vous?</string>
+    <string name="le_java_pour_les_rois">Le java pour les rois</string>
+    <string name="quelle_est_votre_langage_pr_f_r">Quelle est votre langage préféré</string>
+    <string name="situez_vous">Situez vous</string>
+    <string name="todo">todo</string>
+    <string name="l_ada_on_est_l">L\'ada on est là</string>
+    <string name="sql_donne_des_ailes">SQL donne des ailes</string>
+    <string name="le_c_tout_dans_l_anus">Le C ++ tout dans l\'anus</string>
+    <string name="homme">Homme</string>
+    <string name="femme">Femme</string>
+    <string name="autres">Autres</string>
+    <string name="suivant">Suivant</string>
+    <string name="retour">Retour</string>
 </resources>
